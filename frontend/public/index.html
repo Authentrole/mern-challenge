@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Transactions Dashboard</h1>
+    
+    <div class="month-dropdown">
+      <label for="month">Select Month:</label>
+      <select id="month">
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03" selected>March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+    </div>
+    
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search transactions..." />
+    </div>
+
+    <table id="transactions-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prev-btn">Previous</button>
+      <button id="next-btn">Next</button>
+    </div>
+
+    <div class="statistics">
+      <h2>Transactions Statistics</h2>
+      <div id="stats-box">
+        <p>Total Sales: <span id="total-sales">0</span></p>
+        <p>Total Sold Items: <span id="sold-items">0</span></p>
+        <p>Total Not Sold Items: <span id="not-sold-items">0</span></p>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="transactions-bar-chart"></canvas>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
